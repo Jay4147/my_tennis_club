@@ -1,0 +1,14 @@
+{% extends "master.html" %}
+
+
+{% block content %}
+    <p><a href="/">HOME</a></p>
+    <h1>All Courts</h1>
+    <ul>
+    
+    {% for x in court %}
+    <li><a href="court_details/{{ x.id }}">{{ x.name }}</a></li>
+    {% endfor %}
+  </ul>
+  
+{% endblock %}
